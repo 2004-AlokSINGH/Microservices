@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: orderMicroservice
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/payBook
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+  sql:
+    init:
+      platform: mysql
+
+
+
+server:
+  port: 8081
+  
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/  # Update to match your Eureka server
+    fetch-registry: true
+    register-with-eureka: true
+    initial-instance-info-replication-interval-seconds: 30
+    registry-fetch-interval-seconds: 30
+
+
+    
+    
+    
+    
